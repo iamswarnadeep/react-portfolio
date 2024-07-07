@@ -52,7 +52,7 @@ function ContactWithCaptcha() {
 
       if (res.status === 200 || teleRes.status === 200) {
         toast.success('Message sent successfully!');
-        setUserInput({
+        setInput({
           name: '',
           email: '',
           message: '',
