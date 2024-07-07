@@ -29,7 +29,7 @@ function ContactWithCaptcha() {
   const handleSendMail = async (e) => {
     e.preventDefault();
     if (!captcha) {
-      toast.error('Please complete the captcha!!');
+      toast.error('Please complete the captcha!');
       return;
     };
 
@@ -47,7 +47,7 @@ function ContactWithCaptcha() {
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
     try {
-      const res = await emailjs.send(serviceID, templateID, userInput, options);
+      const res = await emailjs.send(serviceID, templateID, input, options);
       // const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
 
       if (res.status === 200 || teleRes.status === 200) {
